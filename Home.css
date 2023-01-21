@@ -1,0 +1,63 @@
+body {
+    background-color: #d5bbdd;
+    padding: 7px;
+}
+
+/* outer-most container */
+.container {
+    border: 1px solid rgb(236, 230, 230);
+    background-color: #d5bbdd;
+    position: relative;
+}
+
+nav {
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    max-width: 960px;
+    font-size: 1.3em;
+}
+
+nav a {
+    margin-left: 19px;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    ;
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+/* overlapping-container(over the animation) */
+.container-2 {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    width: 600px;
+    height: 714px;
+    backdrop-filter: blur(30px) contrast(80%);
+    
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 4.5rem;
+    margin-top: 180px;
+    margin-left: 70px;
+}
+
+h3{
+    color: aliceblue;
+    margin-top: 50px;
+    margin-left: 70px;
+}
