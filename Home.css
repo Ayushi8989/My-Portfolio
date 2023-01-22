@@ -6,7 +6,7 @@ body {
 /* outer-most container */
 .container {
     border: 1px solid rgb(236, 230, 230);
-    background-color: #d5bbdd;
+    background-color: #dfcce5;
     position: relative;
 }
 
@@ -26,11 +26,11 @@ nav a {
 a {
     color: aliceblue;
     text-decoration: none;
-    ;
 }
 
 video {
     display: block;
+    visibility: hidden;
     margin: 0 auto;
 }
 
@@ -46,7 +46,6 @@ video::-webkit-media-controls {
     width: 600px;
     height: 714px;
     backdrop-filter: blur(30px) contrast(80%);
-    
 }
 
 h1 {
@@ -56,8 +55,96 @@ h1 {
     margin-left: 70px;
 }
 
-h3{
+h3 {
     color: aliceblue;
     margin-top: 50px;
     margin-left: 70px;
+}
+
+/* social-handles' container */
+.socials {
+    z-index: 3;
+    position: absolute;
+    color: aliceblue;
+    bottom: 0px;
+    right: 0px;
+    font-size: 2em;
+    transition: transform .5s ease-in-out;
+}
+
+.socials i {
+    margin-right: 17px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding: 5px;
+    backdrop-filter: blur(20px);
+}
+
+.socials :hover {
+    transform: scale(1.3);
+    border-radius: 7px;
+    color: rgba(20, 19, 20, 0.692);
+}
+
+#about-me {
+    margin-top: 30px;
+    border: 1px solid rgb(236, 230, 230);
+    background-color: #dfcce5;
+    position: relative;
+}
+
+h2 {
+    color: aliceblue;
+    font-size: 3em;
+    margin-top: 40px;
+    margin-left: 70px;
+}
+
+.cont {
+    display: block;
+    margin: 0 auto;
+    padding: 50px;
+    width: 960px;
+    border: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #1d1e1fa9;
+    margin-bottom: 30px;
+    font-size: 3em;
+    color: aliceblue;
+    backdrop-filter: blur(5px);
+}
+
+.cont i {
+    margin-right: 50px;
+}
+
+/* .wrapper {
+    max-width: 250px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
+}
+
+.cont1 {
+    color: white;
+    padding: 2rem;
+    background-color: #dfcce5;
+} */
+
+.tech-stack{
+    z-index: 2;
+    position: relative;
+}
+.elements{
+    z-index: 1;
+    position: absolute;
+    animation: floating 7s infinite;
+    top: 30px;
+}
+
+@keyframes floating {
+    0% { transform: translate(0px,  0px); }
+    50%  { transform: translate(0px, 60px); }
+    100%   { transform: translate(0, -0px); }   
 }
