@@ -7,86 +7,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayushi Singh | Portfolio</title>
     <link rel="stylesheet" href="Home.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- cdn link for font-awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="containerOne">
         <nav>
             <a href="#">Home</a>
             <a href="#about-me">About-me</a>
             <a href="#projects">Projects</a>
         </nav>
 
-        <div class="container-2">
+        <div class="overlayBox">
             <div class="header">
                 <h1>Hi, I'm Ayushi Singh</h1>
             </div>
-            <div class="text">
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo unde quibusdam harum sint perferendis
-                    debitis voluptas voluptates, ducimus veritatis sapiente.</h3>
+            <div class="header-text">
+                <p>I am a sophomore at IIIT Kalyani, West Bengal. I create illustrations, play with animations, craft
+                    websites and everything in between.</p>
             </div>
         </div>
-
+        <!-- animation video -->
         <video width="880" height="580" controls autoplay muted loop>
             <source src="assests/animation0001-0500 (2) (1).mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
+        <!-- all the social handles -->
         <div class="socials">
             <a href="#"><i class="fa-solid fa-heart" title="Drop-a-heart"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=ayushi0628@gmail.com&hl=en"><i
+                    class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/Ayushi8989"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ayushi-singh-3660a6229/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-
     </div>
 
     <div id="about-me">
-        <div class="elements">
-            <img src="assests/image-02.png" height="800" width="1250">
-        </div>
-        <!-- <div class="circle">
-            <img src="assests/Untitled-1-01.png" height="500" width="900">
-        </div> -->
-        <div class="tech-stack">
-            <h2>Tech-stack</h2>
-            <div class="cont lang">
-                <i class="fa-brands fa-html5" title="HTML"></i>
-                <i class="fa-brands fa-css3-alt" title="CSS"></i>
-                <i class="fa-brands fa-square-js" title="JavaScript"></i>
-                <i class="fa-brands fa-react" title="React"></i>
-                <i class="fa-brands fa-python" title="Python"></i>
-                <i class="fa-solid fa-c" title="C"></i>
+        <div class="tech-stacks">
+            <div class="background-elements">
+                <img src="assests/image-02.png" height="800" width="1250">
             </div>
-            <div class="cont design">
-                <i class="fa-brands fa-figma" title="Figma"></i>
-            </div>
-            <div class="cont design">
-                <i class="fa-brands fa-figma" title="Figma"></i>
-            </div>
-
-            <!-- <div class="wrapper">
-                <div class="cont1">
-                    .
+            <div class="tech-stack">
+                <h2>Tech-stack</h2>
+                <div class="cont lang">
+                    <i class="fa-brands fa-html5" title="HTML"></i>
+                    <i class="fa-brands fa-css3-alt" title="CSS"></i>
+                    <i class="fa-brands fa-square-js" title="JavaScript"></i>
+                    <i class="fa-brands fa-react" title="React"></i>
+                    <img src="" height="50" width="50" title="Node">
+                    <i class="fa-brands fa-python" title="Python"></i>
+                    <img src="" height="50" width="50" title="C++">
                 </div>
-            </div> -->
-
+                <div class="cont design">
+                    <i class="fa-brands fa-figma" title="Figma"></i>
+                    <img src="" height="50" width="50" title="Canva">
+                    <img src="" height="50" width="50" title="Adobe Illustrator">
+                    <img src="" height="50" width="50" title="Adobe After Effects">
+                    <img src="" height="50" width="50" title="Blender">
+                </div>
+                <div class="cont design">
+                    <i class="fa-brands fa-figma" title="Figma"></i>
+                    <img src="" height="50" width="50" title="Canva">
+                    <img src="" height="50" width="50" title="Adobe Illustrator">
+                    <img src="" height="50" width="50" title="Adobe After Effects">
+                    <img src="" height="50" width="50" title="Blender">
+                </div>
+            </div>
         </div>
-        <div class="exp">
+
+        <div class="experience">
             <h2>Professional experience</h2>
             <div class="box-border">
                 <div class="sidebar">
-                    <button id="Button" onclick="myFunc()">
-                        GDSC IIIT
-                    </button>
                     <a href="#content">GDSC IIITK</a>
-                    <a href="#content1">#2</a>
+                    <a href="#">#2</a>
                     <a href="#">#3</a>
                     <a href="#">#4</a>
                     <a href="#">#5</a>
-
                 </div>
                 <div id="content">
                     <h3>Google Developer Students Club, IIIT Kalyani<br>
@@ -96,21 +95,13 @@
                     Involved in a peer-to-peer learning environment to assist community events <br>
                     and contributed in the flagship event; Winter of Code 3.0
                 </div>
-                <div id="content1">
-                    <h3>Google1 Developer Students Club, IIIT Kalyani<br>
-                        September'22 - Present</h3>
-                    Core Team Member (UI/UX Lead)<br>
-                    Used Figma, Canva, Illustrator, photoshop for UI/UX designing.<br>
-                    Involved in a peer-to-peer learning environment to assist community events <br>
-                    and contributed in the flagship event; Winter of Code 3.0
-                </div>
             </div>
         </div>
     </div>
+
     <div id="projects">
         <h2>Explore my work</h2>
         <div class="project-cards">
-
             <ul class="cards">
                 <li>
                     <a href="" class="card">
@@ -156,9 +147,7 @@
                         </div>
                     </a>
                 </li>
-
             </ul>
-
         </div>
     </div>
 

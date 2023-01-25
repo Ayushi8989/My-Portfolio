@@ -1,14 +1,12 @@
 body {
     padding: 7px;
     background-color:#90aa88;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* outer-most container */
-.container {
+.containerOne {
     border: 1px solid rgb(236, 230, 230);
-    /* background: linear-gradient(217deg, #84c184, rgba(60, 255, 0, 0) 70.71%),
-            linear-gradient(127deg, #5697b4, rgba(0, 183, 255, 0) 70.71%),
-            linear-gradient(336deg, #630000, rgba(25, 0, 255, 0) 70.71%); */
     background-color: #5d7755;
     position: relative;
     max-height: 610px;
@@ -40,7 +38,7 @@ video::-webkit-media-controls {
 }
 
 /* overlapping-container(over the animation) */
-.container-2 {
+.overlayBox {
     z-index: 2;
     position: absolute;
     top: 0px;
@@ -57,7 +55,7 @@ video::-webkit-media-controls {
     margin-left: 70px;
 }
 
-.text{
+.header-text{
     color: #fff;
     margin-top: 50px;
     margin-left: 70px;
@@ -90,6 +88,7 @@ video::-webkit-media-controls {
     color: #fff;
 }
 
+/* contains tech-stack and experience */
 #about-me {
     margin-top: 15px;
     border: 1px solid rgb(236, 230, 230);
@@ -125,26 +124,12 @@ h2 {
     padding: 7px;
 }
 
-/* .wrapper {
-    max-width: 250px;
-    padding: 1rem;
-    position: relative;
-    background: linear-gradient(to right, red, purple);
-    padding: 3px;
-}
-
-.cont1 {
-    color: white;
-    padding: 2rem;
-    background-color: #dfcce5;
-} */
-
 .tech-stack {
     z-index: 3;
     position: relative;
 }
 
-.elements {
+.background-elements {
     z-index: 2;
     position: absolute;
     animation: floating 5s infinite;
@@ -181,7 +166,6 @@ h2 {
 
 .box-border {
     margin-left: 160px;
-    /* background-color: #9eb597; */
     padding-top: 30px;
 }
 
@@ -204,7 +188,6 @@ h2 {
     border-color: #506649;
 }
 
-
 #content {
     margin-left: 225px;
     margin-right: 10px;
@@ -213,10 +196,7 @@ h2 {
     color: #fff;
 }
 
-#content1{
-    visibility: hidden;
-}
-
+/* project-cards */
 #projects{
     margin-top: 15px;
     border: 1px solid rgb(236, 230, 230);
