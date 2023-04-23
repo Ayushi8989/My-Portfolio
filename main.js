@@ -1,59 +1,49 @@
-var TxtType = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
+const links = document.querySelectorAll('.sidebar a');
 
-TxtType.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+for (let link of links.values()) {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = link.dataset.target;
+    const section = document.getElementById(target);
+    const sections = document.querySelectorAll('.section');
+    
+    links.forEach(l => {
+      l.classList.remove('active');
+    });
+    link.classList.add('active');
+    
+    sections.forEach(s => {
+      s.classList.remove('active');
+    });
+    section.classList.add('active');
+  });
+}
 
-    if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
+// Add 'active' class to first link and section
+links[0].classList.add('active');
+const section1 = document.getElementById('section1');
+section1.classList.add('active');
 
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+const form = document.getElementById("message-form");
 
-    var that = this;
-    var delta = 200 - Math.random() * 100;
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // prevent page refresh on form submission
 
-    if (this.isDeleting) { delta /= 2; }
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-    if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-    }
+  // send message using AJAX or fetch API
+  // replace the URL with the endpoint that handles message submission
+  fetch("https://example.com/submit-message", {
+    method: "POST",
+    body: JSON.stringify({ name, email, message }),
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
 
-    setTimeout(function() {
-    that.tick();
-    }, delta);
-};
-
-window.onload = function() {
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
-    }
-    // // INJECT CSS
-    // var css = document.createElement("style");
-    // css.type = "text/css";
-    // css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-    // document.body.appendChild(css);
-};
-
-
-
+  // clear form fields after submission
+  form.reset();
+});
